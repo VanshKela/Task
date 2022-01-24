@@ -6,18 +6,27 @@ import linkedin from "../../images/linkedin.png";
 import call from "../../images/call.png";
 import mail from "../../images/mail.png";
 import callWhite from "../../images/call-white.png";
+import people from "../../images/people.png";
+import link from "../../images/link.png";
+import language from "../../images/language.png";
+import web from "../../images/web.png";
+import video from "../../images/video.png";
+import mailBlue from "../../images/mailBlue.png";
+import chat from "../../images/chat.png";
+import calender from "../../images/calender.png";
+
 function Profile() {
   return (
     <div className={styles.profile}>
       <div className={styles.credentials}>
         <h3 className={styles.name}>Jean-Samuel Najnudel</h3>
-        <h3>President</h3>
+        <h3 style={{color:"#6F8C94", marginBottom:"10px"}}>President</h3>
         <span className={styles.span}>
           <h3>Ringover | </h3>
-          <Image src={cloud}></Image>
+          <Image src={people}></Image>
           <h3>101-250</h3>
         </span>
-        <h3>http://www.ringover.com</h3>
+        <h3 style={{color:"#41BCC3", marginBottom:"20px"}}>http://www.ringover.com</h3>
         <div className={styles.social}>
           <a href="/">
             <Image src={cloud}></Image>
@@ -28,7 +37,7 @@ function Profile() {
         </div>
       </div>
       <div className={styles.topics}>
-        <h3>Topics</h3>
+        <h3 style={{color: "#08464B", marginBottom:"20px", fontSize: "25px"}}>Topics</h3>
         <div
           style={{
             display: "flex",
@@ -47,40 +56,40 @@ function Profile() {
         </div>
       </div>
       <div className={styles.contacts}>
-        <h3>Contacts</h3>
+        <h3 style={{color: "#08464B", marginBottom:"20px", fontSize: "25px"}}>Contacts</h3>
         <div className={styles.contactContainer}>
           <Image src={mail}></Image>
-          <h4>j.najnudel@ringover.com</h4>
+          <h3>j.najnudel@ringover.com</h3>
         </div>
         <div className={styles.contactContainer}>
           <Image src={call}></Image>
-          <h4>+33 07 55 35 23 21</h4>{" "}
-          <h4 style={{ color: "red", marginLeft: "10px", fontSize: "12px" }}>
+          <h3>+33 07 55 35 23 21</h3>
+          <h3 style={{ color: "red", marginLeft: "10px", fontSize: "12px" }}>
             Primary
-          </h4>
+          </h3>
         </div>
         <div className={styles.contactContainer}>
           <Image src={call}></Image>
-          <h4>+33 07 55 35 23 21</h4>
+          <h3>+33 07 55 35 23 21</h3>
         </div>
       </div>
       <div className={styles.additional}>
-        <h3>Additional</h3>
+        <h3 style={{color: "#08464B", marginBottom:"20px", fontSize: "25px"}}>Additional</h3>
         <div className={styles.contactContainer}>
           <Image src={mail}></Image>
-          <h4>president@ringover.com</h4>
+          <h3>president@ringover.com</h3>
         </div>
         <div className={styles.contactContainer}>
-          <Image src={call}></Image>
-          <h4>Français</h4>
+          <Image src={language}></Image>
+          <h3>Français</h3>
         </div>
         <div className={styles.contactContainer}>
-          <Image src={call}></Image>
-          <h4>www.youtube.com/ringover</h4>
+          <Image src={link}></Image>
+          <h3>www.youtube.com/ringover</h3>
         </div>
         <div className={styles.contactContainer}>
-          <Image src={call}></Image>
-          <h4>Indian Standard (+5:30)</h4>
+          <Image src={web}></Image>
+          <h3>Indian Standard (+5:30)</h3>
         </div>
       </div>
       <div className={styles.actions}>
@@ -88,10 +97,10 @@ function Profile() {
           <Image src={callWhite}></Image>
         </div>
         <div className={styles.actionBar}>
-          <Image src={call}></Image>
-          <Image src={call}></Image>
-          <Image src={call}></Image>
-          <Image src={call}></Image>
+          <Image src={video}></Image>
+          <Image src={calender}></Image>
+          <Image src={mailBlue}></Image>
+          <Image src={chat}></Image>
         </div>
       </div>
     </div>

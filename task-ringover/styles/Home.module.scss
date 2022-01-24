@@ -57,6 +57,9 @@
 
 .workspace {
     width: 60%;
+    border-right: 2px solid #D3D3D3;
+    border-left: 1px solid #D3D3D3;
+    height: 100%;
 }
 
 .profile {
@@ -65,14 +68,22 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px 20px;
+    justify-content: start;
+    padding: 20px 20px;
+    h3 {
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
     .credentials {
+        margin-bottom: 40px;
         .name {
-            font-size: 25px;
+            font-size: 30px;
+            margin-bottom: 10px
         }
         .span {
             display: flex;
             flex-direction: row;
+            margin-bottom: 10px
         }
         .social {
             width: 100%;
@@ -89,19 +100,27 @@
         }
     }
     .topics {
+        margin-bottom: 50px;
         .topicContainer {
+            text-align: center;
             border: 1px solid #08464b;
-            border-radius: 10px;
-            padding: 0px 3px;
-            margin-right: 10px;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 0px 10px;
+            h3 {
+                margin: 0;
+            }
         }
     }
     .contacts {
+        margin-bottom: 40px;
         .contactContainer {
             display: flex;
             flex-direction: row;
             align-items: center;
             width: 100%;
+            margin-bottom: 8px;
+            margin-left: 10px;
             h4 {
                 font-size: 14px;
                 margin-left: 5px;
@@ -109,11 +128,14 @@
         }
     }
     .additional {
+        margin-bottom: 45px;
         .contactContainer {
             display: flex;
             flex-direction: row;
             align-items: center;
             width: 100%;
+            margin-bottom: 8px;
+            margin-left: 10px;
             h4 {
                 font-size: 14px;
                 margin-left: 5px;
@@ -128,16 +150,16 @@
         justify-content: space-between;
         .call {
             display: flex;
-            height: 44px;
-            width: 44px;
+            height: 55px;
+            width: 55px;
             align-items: center;
             justify-content: center;
             background-color: #41BCC3;
-            border-radius: 20px;
+            border-radius: 25px;
             margin-right: 5px;
         }
         .actionBar {
-            height: 45px;
+            height: 60px;
             width: 240px;
             display: flex;
             flex-direction: row;
