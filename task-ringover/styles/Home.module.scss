@@ -56,6 +56,9 @@
 }
 
 .workspace {
+    @media only screen and (max-width: 900px) {
+        width: 70%;
+    }
     width: 60%;
     border-right: 2px solid #D3D3D3;
     border-left: 1px solid #D3D3D3;
@@ -93,7 +96,6 @@
 }
 
 .profile {
-    width: 20%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -101,7 +103,6 @@
     justify-content: space-evenly;
     padding: 25px 20px;
     h3 {
-        margin-left: 10px;
         margin-bottom: 5px;
         font-size: 20px;
     }
@@ -151,10 +152,8 @@
             align-items: center;
             width: 100%;
             margin-bottom: 8px;
-            margin-left: 10px;
-            h4 {
-                font-size: 14px;
-                margin-left: 5px;
+            h3 {
+                margin-left: 10px;
             }
         }
     }
@@ -166,10 +165,8 @@
             align-items: center;
             width: 100%;
             margin-bottom: 8px;
-            margin-left: 10px;
-            h4 {
-                font-size: 14px;
-                margin-left: 5px;
+            h3 {
+                margin-left: 10px;
             }
         }
     }
@@ -191,7 +188,7 @@
         }
         .actionBar {
             height: 60px;
-            width: 240px;
+            width: 65%;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -203,5 +200,8 @@
 }
 
 .rightSide {
+    @media only screen and (max-width: 900px) {
+        display: none;
+    }
     width: 20%;
 }
