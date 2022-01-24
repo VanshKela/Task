@@ -1,0 +1,25 @@
+.dashboardContainer {
+    display: flex;
+    height: 94vh;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    height: 54px;
+}
+
+.workspace {
+    width: 50%;
+}
+
+.profile {
+    width: 25%;
+}
+
+.rightSide {
+    width: 25%;
+}
