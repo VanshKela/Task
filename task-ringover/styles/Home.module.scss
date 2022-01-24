@@ -1,15 +1,58 @@
 .dashboardContainer {
     display: flex;
-    height: 94vh;
+    height: 93vh;
     width: 100%;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
-    background-color: #f5f5f5;
 }
 
 .navbar {
-    height: 54px;
+    padding: 0px 60px;
+    background-color: #08262E;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .text {
+            margin-left: 8px;
+            font-size: 18px;
+            color: #f5f5f5;
+        }
+    }
+    .searchbar {
+        input {
+            background-color: #203E46;
+            width: 450px;
+            height: 40px;
+            border: 0;
+            border-radius: 5px;
+        }
+        input::placeholder {
+            padding: 5px;
+            color: #F1F2F4;
+        }
+    }
+    .pannel {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100px;
+        justify-content: space-evenly;
+        .profileImage {
+            border-radius: 20px;
+        }
+    }
 }
 
 .workspace {
@@ -18,6 +61,16 @@
 
 .profile {
     width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 0px 20px;
+    .credentials {
+        .name {
+            font-size: 25px;
+        }
+    }
 }
 
 .rightSide {
