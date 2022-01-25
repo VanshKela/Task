@@ -118,6 +118,11 @@
             align-items: center;
             box-shadow: 0px -6px 40px rgba(210, 210, 210, 0.12);
             .activeTab {
+                padding: 0px 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
                 width: 25%;
                 height: 40px;
                 background: #08464B;
@@ -127,6 +132,11 @@
                 margin-right: 10px;
             }
             .tab {
+                padding: 0px 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
                 border: 0px;
                 width: 25%;
                 height: 40px;
@@ -146,10 +156,10 @@
                     font-size: 14px;
                     line-height: 16px;
                 }
-                .cross {
-                    border: 0;
-                    background: transparent;
-                }
+            }
+            .cross {
+                border: 0;
+                background: transparent;
             }
         }
         .space {

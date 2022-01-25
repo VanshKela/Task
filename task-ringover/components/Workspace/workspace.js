@@ -61,11 +61,11 @@ function WorkEnvironment({ tabs, removeTab }) {
 
 function Tab({ index, selectedIndex, text, setSelectedIndex, removeTab }) {
   return (
-    <button onClick={setSelectedIndex} className={index === selectedIndex ? styles.activeTab : styles.tab}>
-      <div className={styles.container}>
+    <button className={index === selectedIndex ? styles.activeTab : styles.tab}>
+      <div onClick={setSelectedIndex} className={styles.container}>
         <h3>{text}</h3>
-        <button onClick={removeTab} className={styles.cross}><Image src={cross} alt="chat" /></button>
       </div>
+      <button onClick={removeTab} className={styles.cross}><Image src={cross} alt="chat" /></button>
     </button>
   );
 }
