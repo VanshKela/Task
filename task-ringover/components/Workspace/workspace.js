@@ -6,7 +6,7 @@ import Image from "next/image";
 import noWork from "../../images/noWork.png";
 import cross from "../../images/cross.png";
 import logo from "../../images/logo.png";
-function Workspace({ tabs, removeTab }) {
+function Workspace({ tabs, removeTab, toggle }) {
   console.log(tabs);
   return (
     <div className={styles.workspace}>
@@ -16,7 +16,7 @@ function Workspace({ tabs, removeTab }) {
           <Image src={record} alt="record" />
           <Image src={note} alt="note" />
         </div>
-        <div className={styles.hamburger}><Image src={logo} alt="noWork" /></div>
+        <div onClick={toggle} className={styles.hamburger}><Image src={logo} alt="noWork" /></div>
 
       </div>
       {tabs.length === 0 ? (
@@ -37,7 +37,7 @@ function WorkEnvironment({ tabs, removeTab }) {
   const [displayText, setDisplayText] = useState(tabs[0]);
   useEffect(() => {
     setDisplayText(tabs[selectedIndex]);
-  }, [selectedIndex]);
+  }, [selectedIndex, tabs.length]);
   return (
     <div className={styles.workEnvironment}>
       <div className={styles.tabContainer}>

@@ -82,6 +82,7 @@
             @media only screen and (min-width: 960px) {
                 display: none;
             }
+            position: absolute;
         }
     }
     .main {
@@ -146,6 +147,7 @@
                 margin-right: 10px;
             }
             .container {
+                width: 100%;
                 display: flex;
                 flex-direction: row;
                 padding: 5px 10px;
@@ -295,7 +297,103 @@
 
 .rightSide {
     @media only screen and (max-width: 960px) {
-        display: none;
+        position: fixed;
+        opacity: 0;
+        right: 0;
+        background: white;
+        z-index: 999;
+    }
+    border-left: 2px solid #d3d3d3;
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .actions {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 10%;
+        width: 100%;
+        border-bottom: 2px solid #e4e5e9;
+        justify-content: space-evenly;
+        .salesforce {
+            width: 40%;
+            height: 45px;
+            display: flex;
+            flex-direction: row;
+            background-color: #41bcc3;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .actionButton {
+            width: 40%;
+            height: 45px;
+            display: flex;
+            flex-direction: row;
+            border-radius: 10px;
+            justify-content: space-evenly;
+            border: 2px solid #e4e5e9;
+            align-items: center;
+        }
+    }
+    .pannel {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        height: 90%;
+        width: 100%;
+        padding: 10px;
+        .buttonContainer {
+            height: 10%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 5px 10px;
+            width: 95%;
+            align-self: center;
+            border: 2px solid #e4e5e9;
+            border-radius: 10px;
+            .button {
+                padding: 8px 15px;
+                background-color: white;
+                border: 0;
+                font-size: 20px;
+                border-radius: 12px;
+            }
+            .button:hover {
+                background-color: #08464b;
+                color: white;
+            }
+            .activeButton {
+                padding: 8px 15px;
+                background-color: #08464b;
+                border: 0;
+                font-size: 20px;
+                border-radius: 12px;
+                color: white;
+            }
+        }
+        .pannelDisplay {
+            height: 90%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.sidebar {
+    @media only screen and (max-width: 960px) {
+        position: fixed;
+        opacity: 1;
+        right: 0;
+        background: white;
+        z-index: 999;
     }
     border-left: 2px solid #d3d3d3;
     width: 400px;

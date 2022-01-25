@@ -1,0 +1,868 @@
+.dashboardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 93vh;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.navbar {
+  padding: 5px 60px;
+  background-color: #08262e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar .logo .img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar .logo .text {
+  margin-left: 8px;
+  font-size: 18px;
+  color: #f5f5f5;
+}
+
+.navbar .searchbar input {
+  background-color: #203e46;
+  width: 450px;
+  height: 40px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.navbar .searchbar input::-webkit-input-placeholder {
+  padding: 5px;
+  color: #f1f2f4;
+}
+
+.navbar .searchbar input:-ms-input-placeholder {
+  padding: 5px;
+  color: #f1f2f4;
+}
+
+.navbar .searchbar input::-ms-input-placeholder {
+  padding: 5px;
+  color: #f1f2f4;
+}
+
+.navbar .searchbar input::placeholder {
+  padding: 5px;
+  color: #f1f2f4;
+}
+
+.navbar .pannel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.navbar .pannel .profileImage {
+  border-radius: 20px;
+}
+
+.workspace {
+  height: 100%;
+  width: 60%;
+}
+
+@media only screen and (max-width: 900px) {
+  .workspace {
+    width: 70%;
+  }
+}
+
+.workspace .heading {
+  color: #08464B;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 20px;
+}
+
+.workspace .heading .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100px;
+  height: 54px;
+  border: 2px solid #f2f2f2;
+  border-radius: 15px;
+}
+
+.workspace .heading .hamburger {
+  position: absolute;
+}
+
+@media only screen and (min-width: 960px) {
+  .workspace .heading .hamburger {
+    display: none;
+  }
+}
+
+.workspace .main {
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.workspace .main h3 {
+  padding-top: 20px;
+}
+
+.workspace .main p {
+  padding-top: 5px;
+  font-size: 0.9rem;
+}
+
+.workspace .workEnvironment {
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.workspace .workEnvironment p {
+  padding-top: 5px;
+  font-size: 0.9rem;
+}
+
+.workspace .workEnvironment .tabContainer {
+  width: 100%;
+  height: 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px -6px 40px rgba(210, 210, 210, 0.12);
+          box-shadow: 0px -6px 40px rgba(210, 210, 210, 0.12);
+}
+
+.workspace .workEnvironment .tabContainer .activeTab {
+  padding: 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+  height: 40px;
+  background: #08464B;
+  border-radius: 4px;
+  border: 0px;
+  color: white;
+  margin-right: 10px;
+}
+
+.workspace .workEnvironment .tabContainer .tab {
+  padding: 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0px;
+  width: 25%;
+  height: 40px;
+  background: #6F8C94;
+  border-radius: 4px;
+  color: white;
+  margin-right: 10px;
+}
+
+.workspace .workEnvironment .tabContainer .container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 5px 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.workspace .workEnvironment .tabContainer .container h3 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.workspace .workEnvironment .tabContainer .cross {
+  border: 0;
+  background: transparent;
+}
+
+.workspace .workEnvironment .space {
+  width: 100%;
+  height: 92%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile {
+  min-width: 320px;
+  border-right: 2px solid #d3d3d3;
+  height: 100%;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px 20px;
+}
+
+.profile h3 {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.profile .credentials {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.profile .credentials .user {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profile .credentials .user .name {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.profile .credentials .span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile .credentials .social {
+  width: 100%;
+  height: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: "none";
+  border-top: 2px solid #e4e5e9;
+  border-bottom: 2px solid #e4e5e9;
+}
+
+.profile .credentials .social a {
+  margin-right: 10px;
+}
+
+.profile .topics {
+  margin-bottom: 40px;
+}
+
+.profile .topics .topicContainer {
+  text-align: center;
+  border: 1px solid #08464b;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0px 10px;
+}
+
+.profile .topics .topicContainer h3 {
+  margin: 0;
+}
+
+.profile .contacts {
+  margin-bottom: 40px;
+}
+
+.profile .contacts .contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.profile .contacts .contactContainer h3 {
+  margin-left: 10px;
+}
+
+.profile .additional {
+  margin-bottom: 45px;
+}
+
+.profile .additional .contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.profile .additional .contactContainer h3 {
+  margin-left: 10px;
+}
+
+.profile .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profile .actions .call {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 55px;
+  width: 55px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #41bcc3;
+  border-radius: 25px;
+  margin-right: 5px;
+}
+
+.profile .actions .actionBar {
+  height: 60px;
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border: 2px solid #41bcc3;
+  border-radius: 15px;
+}
+
+.profile .actions .actionBar .button {
+  border: 0px;
+  color: white;
+}
+
+.profile .actions .actionBar .button:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.rightSide {
+  border-left: 2px solid #d3d3d3;
+  width: 400px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 960px) {
+  .rightSide {
+    position: fixed;
+    opacity: 0;
+    right: 0;
+    background: white;
+    z-index: 999;
+  }
+}
+
+.rightSide .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10%;
+  width: 100%;
+  border-bottom: 2px solid #e4e5e9;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.rightSide .actions .salesforce {
+  width: 40%;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #41bcc3;
+  border-radius: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rightSide .actions .actionButton {
+  width: 40%;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 10px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border: 2px solid #e4e5e9;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rightSide .pannel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 90%;
+  width: 100%;
+  padding: 10px;
+}
+
+.rightSide .pannel .buttonContainer {
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 5px 10px;
+  width: 95%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  border: 2px solid #e4e5e9;
+  border-radius: 10px;
+}
+
+.rightSide .pannel .buttonContainer .button {
+  padding: 8px 15px;
+  background-color: white;
+  border: 0;
+  font-size: 20px;
+  border-radius: 12px;
+}
+
+.rightSide .pannel .buttonContainer .button:hover {
+  background-color: #08464b;
+  color: white;
+}
+
+.rightSide .pannel .buttonContainer .activeButton {
+  padding: 8px 15px;
+  background-color: #08464b;
+  border: 0;
+  font-size: 20px;
+  border-radius: 12px;
+  color: white;
+}
+
+.rightSide .pannel .pannelDisplay {
+  height: 90%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidebar {
+  border-left: 2px solid #d3d3d3;
+  width: 400px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 960px) {
+  .sidebar {
+    position: fixed;
+    opacity: 1;
+    right: 0;
+    background: white;
+    z-index: 999;
+  }
+}
+
+.sidebar .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10%;
+  width: 100%;
+  border-bottom: 2px solid #e4e5e9;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.sidebar .actions .salesforce {
+  width: 40%;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #41bcc3;
+  border-radius: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar .actions .actionButton {
+  width: 40%;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 10px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border: 2px solid #e4e5e9;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar .pannel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 90%;
+  width: 100%;
+  padding: 10px;
+}
+
+.sidebar .pannel .buttonContainer {
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 5px 10px;
+  width: 95%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  border: 2px solid #e4e5e9;
+  border-radius: 10px;
+}
+
+.sidebar .pannel .buttonContainer .button {
+  padding: 8px 15px;
+  background-color: white;
+  border: 0;
+  font-size: 20px;
+  border-radius: 12px;
+}
+
+.sidebar .pannel .buttonContainer .button:hover {
+  background-color: #08464b;
+  color: white;
+}
+
+.sidebar .pannel .buttonContainer .activeButton {
+  padding: 8px 15px;
+  background-color: #08464b;
+  border: 0;
+  font-size: 20px;
+  border-radius: 12px;
+  color: white;
+}
+
+.sidebar .pannel .pannelDisplay {
+  height: 90%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=Home.module.css.map */

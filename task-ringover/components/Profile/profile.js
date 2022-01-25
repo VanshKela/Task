@@ -17,15 +17,16 @@ import calender from "../../images/calender.png";
 import edit from "../../images/edit.png";
 import verified from "../../images/verified_user.png";
 
-function Profile({addTab}) {
+function Profile({ addTab}) {
   return (
     <div className={styles.profile}>
       <div className={styles.credentials}>
         <span className={styles.user}>
           <h3 className={styles.name}>Jean-Samuel Najnudel</h3>
           <div className={styles.icons}>
-          <Image src={verified}/>
-          <Image src={edit}/></div>
+            <Image src={verified} />
+            <Image src={edit} />
+          </div>
         </span>
         <h3 style={{ color: "#6F8C94", marginBottom: "10px" }}>President</h3>
         <span className={styles.span}>
@@ -118,10 +119,21 @@ function Profile({addTab}) {
           <Image src={callWhite}></Image>
         </div>
         <div className={styles.actionBar}>
-          <button onClick={()=>addTab("Video")} className={styles.button}><Image src={video}></Image></button>
-          <button onClick={()=>addTab("Schedule")} className={styles.button}><Image src={calender}></Image></button>
-          <button onClick={()=>addTab("Mail - Compose")} className={styles.button}><Image src={mailBlue}></Image></button>
-          <button onClick={()=>addTab("Chat")} className={styles.button}><Image src={chat}></Image></button>
+          <button onClick={() => addTab("Video")} className={styles.button}>
+            <Image src={video}></Image>
+          </button>
+          <button onClick={() => addTab("Schedule")} className={styles.button}>
+            <Image src={calender}></Image>
+          </button>
+          <button
+            onClick={() => addTab("Mail - Compose")}
+            className={styles.button}
+          >
+            <Image src={mailBlue}></Image>
+          </button>
+          <button onClick={() => addTab("Chat")} className={styles.button}>
+            <Image src={chat}></Image>
+          </button>
         </div>
       </div>
     </div>

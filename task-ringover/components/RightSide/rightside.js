@@ -1,37 +1,37 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from "../../styles/Home.module.scss";
 import Image from "next/image";
 import stop from "../../images/stop.png";
 import pause from "../../images/pause.png";
 import upload from "../../images/upload.png";
-function RightSide() {
-    const [component, setComponent] = useState(<Activity/>);
-    const [activityActive, setActivityActive] = useState(true);
-    const [tasksActive, setTasksActive] = useState(false);
-    const [progressActive, setProgressActive] = useState(false);
-    function changeComponent(component){
-        setComponent(component);
-    }
-    function activitySelected(){
-        changeComponent(<Activity/>);
-        setActivityActive(true);
-        setTasksActive(false);
-        setProgressActive(false);
-    }
-    function tasksSelected(){
-      changeComponent(<Tasks/>);
-      setActivityActive(false);
-      setTasksActive(true);
-      setProgressActive(false);
+function RightSide({ isOpen }) {
+  const [component, setComponent] = useState(<Activity />);
+  const [activityActive, setActivityActive] = useState(true);
+  const [tasksActive, setTasksActive] = useState(false);
+  const [progressActive, setProgressActive] = useState(false);
+  function changeComponent(component) {
+    setComponent(component);
   }
-  function progressSelected(){
-    changeComponent(<Progress/>);
+  function activitySelected() {
+    changeComponent(<Activity />);
+    setActivityActive(true);
+    setTasksActive(false);
+    setProgressActive(false);
+  }
+  function tasksSelected() {
+    changeComponent(<Tasks />);
+    setActivityActive(false);
+    setTasksActive(true);
+    setProgressActive(false);
+  }
+  function progressSelected() {
+    changeComponent(<Progress />);
     setActivityActive(false);
     setTasksActive(false);
     setProgressActive(true);
-}
+  }
   return (
-    <div className={styles.rightSide}>
+    <div className={isOpen ? styles.sidebar : styles.rightSide}>
       <div className={styles.actions}>
         <div className={styles.salesforce}>
           <Image src={upload} alt="poc"></Image>
@@ -44,9 +44,24 @@ function RightSide() {
       </div>
       <div className={styles.pannel}>
         <div className={styles.buttonContainer}>
-          <button onClick={activitySelected} className={activityActive?styles.activeButton:styles.button}>Activity</button>
-          <button onClick={tasksSelected} className={tasksActive?styles.activeButton:styles.button}>Tasks</button>
-          <button onClick={progressSelected} className={progressActive?styles.activeButton:styles.button}>Progress</button>
+          <button
+            onClick={activitySelected}
+            className={activityActive ? styles.activeButton : styles.button}
+          >
+            Activity
+          </button>
+          <button
+            onClick={tasksSelected}
+            className={tasksActive ? styles.activeButton : styles.button}
+          >
+            Tasks
+          </button>
+          <button
+            onClick={progressSelected}
+            className={progressActive ? styles.activeButton : styles.button}
+          >
+            Progress
+          </button>
         </div>
         {component}
       </div>
@@ -54,20 +69,14 @@ function RightSide() {
   );
 }
 
-function Activity(){
-    return (
-        <div className={styles.pannelDisplay}>Activity</div>
-    );
+function Activity() {
+  return <div className={styles.pannelDisplay}>Activity</div>;
 }
-function Tasks(){
-    return (
-        <div className={styles.pannelDisplay}>Tasks</div>
-    );
+function Tasks() {
+  return <div className={styles.pannelDisplay}>Tasks</div>;
 }
-function Progress(){
-    return (
-        <div className={styles.pannelDisplay}>Progress</div>
-    );
+function Progress() {
+  return <div className={styles.pannelDisplay}>Progress</div>;
 }
 
 export default RightSide;
