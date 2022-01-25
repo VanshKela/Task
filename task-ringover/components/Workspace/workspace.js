@@ -41,8 +41,8 @@ function WorkEnvironment({ tabs, removeTab }) {
               index={index}
               selectedIndex={selectedIndex}
               text={tabs[index]}
-              removeTab={removeTab}
-              setSelectedIndex={setSelectedIndex}
+              removeTab={()=>removeTab(index)}
+              setSelectedIndex={()=>setSelectedIndex(index)}
             />
           );
         })}
@@ -54,15 +54,10 @@ function WorkEnvironment({ tabs, removeTab }) {
 
 function Tab({ index, selectedIndex, text, setSelectedIndex, removeTab }) {
   return (
-    <button onClick={()=>setSelectedIndex(index)} className={index === selectedIndex ? styles.activeTab : styles.tab}>
+    <button onClick={setSelectedIndex} className={index === selectedIndex ? styles.activeTab : styles.tab}>
       <div className={styles.container}>
         <h3>{text}</h3>
-        <button onClick={()=>{
-          if (selectedIndex === index){
-            setSelectedIndex(0);
-          }
-          removeTab(index);
-        }} className={styles.cross}><Image src={cross} alt="chat" /></button>
+        <button onClick={removeTab} className={styles.cross}><Image src={cross} alt="chat" /></button>
       </div>
     </button>
   );
