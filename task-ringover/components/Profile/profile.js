@@ -14,19 +14,28 @@ import video from "../../images/video.png";
 import mailBlue from "../../images/mailBlue.png";
 import chat from "../../images/chat.png";
 import calender from "../../images/calender.png";
+import edit from "../../images/edit.png";
+import verified from "../../images/verified_user.png";
 
 function Profile() {
   return (
     <div className={styles.profile}>
       <div className={styles.credentials}>
-        <h3 className={styles.name}>Jean-Samuel Najnudel</h3>
-        <h3 style={{color:"#6F8C94", marginBottom:"10px"}}>President</h3>
+        <span className={styles.user}>
+          <h3 className={styles.name}>Jean-Samuel Najnudel</h3>
+          <div className={styles.icons}>
+          <Image src={verified}/>
+          <Image src={edit}/></div>
+        </span>
+        <h3 style={{ color: "#6F8C94", marginBottom: "10px" }}>President</h3>
         <span className={styles.span}>
           <h3>Ringover | </h3>
           <Image src={people}></Image>
           <h3>101-250</h3>
         </span>
-        <h3 style={{color:"#41BCC3", marginBottom:"20px"}}>http://www.ringover.com</h3>
+        <h3 style={{ color: "#41BCC3", marginBottom: "20px" }}>
+          http://www.ringover.com
+        </h3>
         <div className={styles.social}>
           <a href="/">
             <Image src={cloud}></Image>
@@ -37,7 +46,11 @@ function Profile() {
         </div>
       </div>
       <div className={styles.topics}>
-        <h3 style={{color: "#08464B", marginBottom:"20px", fontSize: "25px"}}>Topics</h3>
+        <h3
+          style={{ color: "#08464B", marginBottom: "20px", fontSize: "25px" }}
+        >
+          Topics
+        </h3>
         <div
           style={{
             display: "flex",
@@ -56,7 +69,11 @@ function Profile() {
         </div>
       </div>
       <div className={styles.contacts}>
-        <h3 style={{color: "#08464B", marginBottom:"20px", fontSize: "25px"}}>Contacts</h3>
+        <h3
+          style={{ color: "#08464B", marginBottom: "20px", fontSize: "25px" }}
+        >
+          Contacts
+        </h3>
         <div className={styles.contactContainer}>
           <Image src={mail}></Image>
           <h3>j.najnudel@ringover.com</h3>
@@ -74,7 +91,11 @@ function Profile() {
         </div>
       </div>
       <div className={styles.additional}>
-        <h3 style={{color: "#08464B", marginBottom:"20px", fontSize: "25px"}}>Additional</h3>
+        <h3
+          style={{ color: "#08464B", marginBottom: "20px", fontSize: "25px" }}
+        >
+          Additional
+        </h3>
         <div className={styles.contactContainer}>
           <Image src={mail}></Image>
           <h3>president@ringover.com</h3>

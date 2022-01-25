@@ -1,19 +1,20 @@
 import React from "react";
 import styles from "../../styles/Home.module.scss";
 import Image from "next/image";
-import callWhite from "../../images/call-white.png";
-import mailBlue from "../../images/mailBlue.png";
+import stop from "../../images/stop.png";
+import pause from "../../images/pause.png";
+import upload from "../../images/upload.png";
 function RightSide() {
   return (
     <div className={styles.rightSide}>
       <div className={styles.actions}>
         <div className={styles.salesforce}>
-          <Image src={callWhite} alt="poc"></Image>
+          <Image src={upload} alt="poc"></Image>
           <h3 style={{ marginLeft: "8px", color: "white" }}>Salesforce</h3>
         </div>
         <div className={styles.actionButton}>
-          <Image src={mailBlue} alt="poc"></Image>
-          <Image src={mailBlue} alt="poc"></Image>
+          <Image src={pause} alt="poc"></Image>
+          <Image src={stop} alt="poc"></Image>
         </div>
       </div>
       <div className={styles.pannel}>
