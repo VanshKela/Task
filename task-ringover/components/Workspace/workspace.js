@@ -11,7 +11,7 @@ function Workspace({ tabs, removeTab, toggle }) {
   return (
     <div className={styles.workspace}>
       <div className={styles.heading}>
-        <h1 style={{ textAlign: "left", color: "#08464B" }}>Workspace</h1>
+        <h1>Workspace</h1>
         <div className={styles.actions}>
           <Image src={record} alt="record" />
           <Image src={note} alt="note" />
