@@ -4,7 +4,8 @@ import record from "../../images/record_voice_over.png";
 import note from "../../images/note.png";
 import Image from "next/image";
 import noWork from "../../images/noWork.png";
-function Workspace() {
+function Workspace({tabs}) {
+  console.log(tabs);
   return (
     <div className={styles.workspace}>
       <div className={styles.heading}>

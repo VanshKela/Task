@@ -17,7 +17,7 @@ import calender from "../../images/calender.png";
 import edit from "../../images/edit.png";
 import verified from "../../images/verified_user.png";
 
-function Profile({onClick}) {
+function Profile({addTab}) {
   return (
     <div className={styles.profile}>
       <div className={styles.credentials}>
@@ -118,10 +118,10 @@ function Profile({onClick}) {
           <Image src={callWhite}></Image>
         </div>
         <div className={styles.actionBar}>
-          <button onClick={()=>onClick("Video")} className={styles.button}><Image src={video}></Image></button>
-          <button onClick={()=>onClick("Schedule")} className={styles.button}><Image src={calender}></Image></button>
-          <button onClick={()=>onClick("Mail - Compose")} className={styles.button}><Image src={mailBlue}></Image></button>
-          <button onClick={()=>onClick("Chat")} className={styles.button}><Image src={chat}></Image></button>
+          <button onClick={()=>addTab("Video")} className={styles.button}><Image src={video}></Image></button>
+          <button onClick={()=>addTab("Schedule")} className={styles.button}><Image src={calender}></Image></button>
+          <button onClick={()=>addTab("Mail - Compose")} className={styles.button}><Image src={mailBlue}></Image></button>
+          <button onClick={()=>addTab("Chat")} className={styles.button}><Image src={chat}></Image></button>
         </div>
       </div>
     </div>

@@ -7,17 +7,17 @@ import RightSide from "../components/RightSide/rightside";
 
 export default function Home() {
   const [tabs, setTabs] = useState([]);
-  function addTab (text){
-    if(tabs.length < 10){
-      setTabs([...tabs, text], console.log(tabs));
+  const addTab = (text) => {
+    if(tabs.length < 4){
+      setTabs([...tabs, text]);
     }
   }
   return (
     <>
       <Navbar />
       <div className={styles.dashboardContainer}>
-        <Profile onClick={addTab}/>
-        <Workspace />
+        <Profile addTab={addTab}/>
+        <Workspace tabs={tabs}/>
         <RightSide />
       </div>
     </>
