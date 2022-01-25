@@ -94,7 +94,7 @@
 }
 
 .profile {
-    min-width: 300px;
+    min-width: 320px;
     border-right: 2px solid #d3d3d3;
     height: 100%;
     width: 20%;
@@ -207,7 +207,7 @@
 }
 
 .rightSide {
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 960px) {
         display: none;
     }
     border-left: 2px solid #d3d3d3;
