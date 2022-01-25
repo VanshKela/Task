@@ -8,7 +8,7 @@ function Workspace() {
   return (
     <div className={styles.workspace}>
       <div className={styles.heading}>
-          <h1 style={{textAlign:"left"}}>Workspace</h1>
+          <h1 style={{textAlign:"left", color:'#08464B'}}>Workspace</h1>
           <div className={styles.actions}>
               <Image src={record} alt="record" />
               <Image src={note} alt="note" />
@@ -19,6 +19,14 @@ function Workspace() {
         <h3>Your workspace is empty!</h3>
         <p>To add a tab, click on any option on your bottom left</p>
       </div>
+    </div>
+  );
+}
+
+function WorkEnvironment () {
+  return (
+    <div className={styles.WorkEnvironment}>
+      Hi
     </div>
   );
 }

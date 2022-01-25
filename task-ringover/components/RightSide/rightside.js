@@ -6,9 +6,30 @@ import pause from "../../images/pause.png";
 import upload from "../../images/upload.png";
 function RightSide() {
     const [component, setComponent] = useState(<Activity/>);
+    const [activityActive, setActivityActive] = useState(true);
+    const [tasksActive, setTasksActive] = useState(false);
+    const [progressActive, setProgressActive] = useState(false);
     function changeComponent(component){
         setComponent(component);
     }
+    function activitySelected(){
+        changeComponent(<Activity/>);
+        setActivityActive(true);
+        setTasksActive(false);
+        setProgressActive(false);
+    }
+    function tasksSelected(){
+      changeComponent(<Tasks/>);
+      setActivityActive(false);
+      setTasksActive(true);
+      setProgressActive(false);
+  }
+  function progressSelected(){
+    changeComponent(<Progress/>);
+    setActivityActive(false);
+    setTasksActive(false);
+    setProgressActive(true);
+}
   return (
     <div className={styles.rightSide}>
       <div className={styles.actions}>
@@ -23,9 +44,9 @@ function RightSide() {
       </div>
       <div className={styles.pannel}>
         <div className={styles.buttonContainer}>
-          <button onClick={()=>changeComponent(<Activity/>)} className={styles.button}>Activity</button>
-          <button onClick={()=>changeComponent(<Tasks/>)} className={styles.button}>Tasks</button>
-          <button onClick={()=>changeComponent(<Progress/>)} className={styles.button}>Progress</button>
+          <button onClick={activitySelected} className={activityActive?styles.activeButton:styles.button}>Activity</button>
+          <button onClick={tasksSelected} className={tasksActive?styles.activeButton:styles.button}>Tasks</button>
+          <button onClick={progressSelected} className={progressActive?styles.activeButton:styles.button}>Progress</button>
         </div>
         {component}
       </div>
