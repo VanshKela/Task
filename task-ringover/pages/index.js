@@ -12,12 +12,15 @@ export default function Home() {
       setTabs([...tabs, text]);
     }
   }
+  const removeTab = (index) => {
+    setTabs(tabs.filter((_, i) => i !== index));
+  }
   return (
     <>
       <Navbar />
       <div className={styles.dashboardContainer}>
         <Profile addTab={addTab}/>
-        <Workspace tabs={tabs}/>
+        <Workspace tabs={tabs} removeTab={removeTab}/>
         <RightSide />
       </div>
     </>

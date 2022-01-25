@@ -5,7 +5,7 @@ import note from "../../images/note.png";
 import Image from "next/image";
 import noWork from "../../images/noWork.png";
 import cross from "../../images/cross.png";
-function Workspace({ tabs }) {
+function Workspace({ tabs, removeTab }) {
   console.log(tabs);
   return (
     <div className={styles.workspace}>
@@ -23,13 +23,13 @@ function Workspace({ tabs }) {
           <p>To add a tab, click on any option on your bottom left</p>
         </div>
       ) : (
-        <WorkEnvironment tabs={tabs} />
+        <WorkEnvironment tabs={tabs} removeTab={removeTab}/>
       )}
     </div>
   );
 }
 
-function WorkEnvironment({ tabs }) {
+function WorkEnvironment({ tabs, removeTab }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   return (
     <div className={styles.workEnvironment}>
@@ -41,22 +41,28 @@ function WorkEnvironment({ tabs }) {
               index={index}
               selectedIndex={selectedIndex}
               text={tabs[index]}
-              onClick={() => setSelectedIndex(index)}
+              removeTab={removeTab}
+              setSelectedIndex={setSelectedIndex}
             />
           );
         })}
       </div>
-      <div className={styles.space}>hi2</div>
+      <div className={styles.space}>{selectedIndex}</div>
     </div>
   );
 }
 
-function Tab({ index, selectedIndex, text, onClick }) {
+function Tab({ index, selectedIndex, text, setSelectedIndex, removeTab }) {
   return (
-    <button onClick={onClick} className={index === selectedIndex ? styles.activeTab : styles.tab}>
+    <button onClick={()=>setSelectedIndex(index)} className={index === selectedIndex ? styles.activeTab : styles.tab}>
       <div className={styles.container}>
         <h3>{text}</h3>
-        <Image src={cross} alt="chat" />
+        <button onClick={()=>{
+          if (selectedIndex === index){
+            setSelectedIndex(0);
+          }
+          removeTab(index);
+        }} className={styles.cross}><Image src={cross} alt="chat" /></button>
       </div>
     </button>
   );
