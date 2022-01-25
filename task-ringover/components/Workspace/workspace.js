@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/Home.module.scss";
 import record from "../../images/record_voice_over.png";
 import note from "../../images/note.png";
 import Image from "next/image";
 import noWork from "../../images/noWork.png";
 import cross from "../../images/cross.png";
+import logo from "../../images/logo.png";
 function Workspace({ tabs, removeTab }) {
   console.log(tabs);
   return (
@@ -15,6 +16,8 @@ function Workspace({ tabs, removeTab }) {
           <Image src={record} alt="record" />
           <Image src={note} alt="note" />
         </div>
+        <div className={styles.hamburger}><Image src={logo} alt="noWork" /></div>
+
       </div>
       {tabs.length === 0 ? (
         <div className={styles.main}>
@@ -31,6 +34,10 @@ function Workspace({ tabs, removeTab }) {
 
 function WorkEnvironment({ tabs, removeTab }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [displayText, setDisplayText] = useState(tabs[0]);
+  useEffect(() => {
+    setDisplayText(tabs[selectedIndex]);
+  }, [selectedIndex]);
   return (
     <div className={styles.workEnvironment}>
       <div className={styles.tabContainer}>
@@ -41,13 +48,13 @@ function WorkEnvironment({ tabs, removeTab }) {
               index={index}
               selectedIndex={selectedIndex}
               text={tabs[index]}
-              removeTab={()=>removeTab(index)}
+              removeTab={()=>{if(index===selectedIndex)setSelectedIndex(0); removeTab(index);}}
               setSelectedIndex={()=>setSelectedIndex(index)}
             />
           );
         })}
       </div>
-      <div className={styles.space}>{selectedIndex}</div>
+      <div className={styles.space}>{displayText}</div>
     </div>
   );
 }
